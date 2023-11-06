@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Bet Called
+{% endblock %}
+
+{% block main %}
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th style="width: 20%"></th>
+                <th style="width: 60%"></th>
+                <th style="width: 20%"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <!-- Left Column -->
+                    <p style="font-size: 12px;"><b>Recent bets</b></p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <!--Here begins table with previous bets-->
+                                <th style="font-size: 10px;">Player</th>
+                                <th style="font-size: 10px;">Bet</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for bet in previous_bets %}
+                            <tr>
+                                <!-- Add your recent bets data here -->
+                                <td style="font-size: 10px;">{{bet['username']}}</td>
+                                <td style="font-size: 10px;">{{bet['bet']}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <!-- Central Column -->
+                    <img src="../static/cacho.jpg" alt="Dudo!" class="img-fluid">
+
+                    <p style="font-size: 15px;">Player {{challenger}} challenged {{bet}} of suit {{suit}} and there are {{real}}</p>
+                    <p style="font-size: 15px;">Player {{loser}} lost a die and has {{loser_rem_dice}} dice(die)</p>
+                    <button class="btn btn-primary" type="button" id="continue_button">Continue</button>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,49 @@
+
+<!-- curl: this is a connect to url command to use in the Terminal section -->
+<!-- curl -I https://www.harvard.edu (you'll get a response from the server ) -->
+
+<!-- to start a [temp and virtual] server to test the site you are coding -->
+<!-- you can use the $ http-server command on the prompt/terminal windows -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>
+            Text for onglet
+
+            <!--// this is just a comment//-->
+
+            <!--Notice that HTML reads up-to-bottom so this script referencing forms that will be defined
+                latter won't work unless we place the script after the forms-->
+
+            <!-- an alternative to this is usign the DOMContentLoaded which is an event that occurs
+                when the whole page is loaded, so we telling HTML not to 'read' this until that event-->
+
+                <!--before the definition of the form-->
+            <script>
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    document.write(position.coords.latitude + " " + position.coords.longitude);
+                });
+
+            </script>
+
+        </title>
+    </head>
+        <body>
+            hello, body
+
+            <p></p>
+
+            <!-- this is a way to implement a search with google on any page-->
+            Use this to search in Google:
+            <form action="https://www.google.com/search">
+                <!--notice I can define the autocomplete function and autofocus sets the cursor on this element-->
+                <input autocomplete="off" autofocus placeholder="Query" name="q" type=""search">
+                        <!--placeholder is some predefined text that appears on the element to give instructions to the user-->
+
+                <!--Notice that we can define any text for the button with the 'value' attribute-->
+                <input type="submit" value="Google search">
+            </form>
+        </body>
+</html>

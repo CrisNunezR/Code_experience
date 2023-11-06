@@ -1,0 +1,11 @@
+sort1 uses: Bubble
+
+How do you know?: Efficiency drops rapidly for larger sets, yet rapid solving for sorted sets (limited lower bound)
+
+sort2 uses: Merge
+
+How do you know?: Very efficient for large random sets
+
+sort3 uses: Selection
+
+How do you know?: efficiency drops rapidly. Very low comparative efficiency for large sorted datasets

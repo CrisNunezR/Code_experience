@@ -1,0 +1,3 @@
+1) I guess by the averages and considering the method applied by Spotify, we could define this listener as "Green"?
+
+2) the values for energy, valence and danceability have a great variance, this combined with the fact that we are averaging the most frequently listened songs means that many distortions might be included in the calculation. A better way might consider a weighted average using the number of times a song was listened and perhaps trying to identify states of mind per period and then trying to define some overall state of mind.

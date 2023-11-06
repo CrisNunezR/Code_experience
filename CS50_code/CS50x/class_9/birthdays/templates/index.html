@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Birthdays</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Birthdays</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+
+                <h2>Add a Birthday</h2>
+                <!-- TODO: Create a form for users to submit a name, a month, and a day -->
+                <form action="/" method="post">
+                    <input type="text" autocomplete="off" autofocus id="fname" required name="name" placeholder="Name">
+                    <input type="text" autocomplete="off" id="fname" name="month" required placeholder="Month">
+                    <!-- option with select dropdown button -notice that we need to adjust its height
+                    <select name="month">
+                        <option value="january">January</option>
+                        <option value="february">February</option>
+                        <option value="march">March</option>
+                        <option value="april">April</option>
+                        <option value="may">May</option>
+                        <option value="june">June</option>
+                        <option value="july">July</option>
+                        <option value="august">August</option>
+                        <option value="september">September</option>
+                        <option value="october">October</option>
+                        <option value="november">November</option>
+                        <option value="dicember">Dicember</option>
+                    </select>
+                    -->
+                    <input type="text" autocomplete="off" id="fname" name="day" required placeholder="Day">
+                    <button type="submit">Add Birthday</button>
+                </form>
+            </div>
+
+            <div class="section">
+                {{message_day}}
+                <h2>All Birthdays</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Birthday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- TODO: Loop through the database entries to display them in this table -->
+                        {% for row in bday_data %}
+
+                        <tr> <!-- this is a row in the table-->
+                            <td> <!-- this is a cell in the table-->
+                                {{ row['name']}}
+                            </td>
+                            <td> {{ row['month']}} / {{ row['day']}}</td>
+                        </tr>
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

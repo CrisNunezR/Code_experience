@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script scr = 'trivia.js'>
+            // TODO: Add code to check answers to questions
+            function button_click(name) {
+                if (name == "button2") {
+                    //correct scripts: green
+                    document.getElementById(name).style.backgroundColor = '#00aa38';
+                    var text = document.getElementById("trivia1_correct");
+                    text.style.display = "block";
+                } else {
+                    //incorrect scripts: red
+                    document.getElementById(name).style.backgroundColor = '#911';
+                    var text = document.getElementById("trivia1_incorrect");
+                    text.style.display = "block";
+                }
+            };
+            //text - trivia 2 script
+            function text_entry(button_name) {
+                capital = document.getElementById('input_text').value;
+                if (capital == "Canberra" || capital == "canberra" ) {
+                    document.getElementById(button_name).style.backgroundColor = '#00aa38';
+                    document.getElementById('input_text').style.backgroundColor = '#00aa38';
+                    var text = document.getElementById("trivia2_correct");
+                    text.style.display = "block";
+
+                } else {
+                    document.getElementById(button_name).style.backgroundColor = '#911';
+                    document.getElementById('input_text').style.backgroundColor = '#911';
+                    var text = document.getElementById("trivia2_incorrect");
+                    text.style.display = "block";
+                }
+            };
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>When did the Berlin wall fall?</h3>
+                <div id="trivia1_correct" style="display: none;">Correct!</div>
+                <div id="trivia1_incorrect" style="display: none;">Incorrect</div>
+
+                <button type="button" onclick="button_click('button1')" id="button1">1990</button>
+                <button type="button" onclick="button_click('button2')" id="button2">1989</button>
+                <button type="button" onclick="button_click('button3')" id="button3">1995</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the capital of Australia?</h3>
+                <div id="trivia2_correct" style="display: none;">Correct!</div>
+                <div id="trivia2_incorrect" style="display: none;">Incorrect</div>
+
+                <input type="text" id="input_text" name="input_text">
+                <button onclick="text_entry('text_button')" id="text_button">Confirm answer</button>
+            </div>
+        </div>
+    </body>
+</html>

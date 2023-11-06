@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Change Password
+{% endblock %}
+
+{% block main %}
+    <form action="/change_pwd" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" value = "{{ user }}" type="text" readonly>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="curr_pwd" name="curr_pwd" placeholder="Current Password" type="password">
+        </div>
+        <div class="mb-3">
+            <!--<input class="form-control mx-auto w-auto" id="password" name="confirmation" placeholder="Password" type="text"> this allows me to see the pwd-->
+            <input class="form-control mx-auto w-auto" id="new_pwd" name="new_pwd" placeholder="New password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Change Password</button>
+    </form>
+{% endblock %}

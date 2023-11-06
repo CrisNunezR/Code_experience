@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Test
+{% endblock %}
+
+{% block main %}
+    <form action="/test" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        <p>Test value <span id="testValue">{{ test }}</span></p>
+        <input type="hidden" name="test" id="testInput" value="{{ test }}">
+        <button class="btn btn-primary" type="button" id="increaseButton">Increase</button>
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+        <button class="btn btn-primary" type="submit" id="callButton" onclick="setCallValue()">Call</button>
+        <input type="hidden" name="call" id="callInput" value="False">
+    </form>
+
+    <!--JS for the increase button and get call action-->
+    <script>
+        // JavaScript function to set the 'call' value to True
+        function setCallValue() {
+            document.getElementById("callInput").value = "True";
+        }
+
+        // JavaScript function to increase the test value
+        document.getElementById("increaseButton").addEventListener("click", function() {
+            // Get the current test value from the HTML
+            let currentTestValue = parseInt(document.getElementById("testValue").textContent);
+
+            // Increase the test value by 1
+            currentTestValue++;
+
+            // Update the HTML with the new test value
+            document.getElementById("testValue").textContent = currentTestValue;
+
+            // Update the hidden input field with the new test value
+            document.getElementById("testInput").value = currentTestValue;
+        });
+    </script>
+
+
+
+
+{% endblock %}

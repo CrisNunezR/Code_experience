@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Hello, Flask</title>
+    </head>
+    <body>
+        <h1>Hello, Flask</h1>
+        <h2>All Birthdays</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Birthday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- TODO: Loop through the database entries to display them in this table -->
+                {% for row in test %}
+                <tr> <!-- this is a row in the table-->
+                    <td> <!-- this is a cell in the table-->
+                        {{row['name']}}
+                    </td>
+                    <td>
+                        {{row['day']}}, {{row['month']}}
+                    </td>
+                </tr>
+                {% endfor %}
+
+
+
+            </tbody>
+        </table>
+    </body>
+</html>

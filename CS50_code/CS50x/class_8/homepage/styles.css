@@ -1,0 +1,50 @@
+/* styles.css */
+
+/* Customizing the body background */
+body {
+    background-color: #f7f7f7;
+  }
+
+  /* Styling the main heading */
+  h1 {
+    color: #007bff;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  /* Styling the navigation bar */
+  .navbar {
+    background-color: #ffffff;
+  }
+
+  .navbar-brand {
+    font-size: 24px;
+    color: #333333;
+  }
+
+  /* Styling the navigation links */
+  .nav-link {
+    color: #333333;
+  }
+
+  /* Changing the link color when hovered */
+  .nav-link:hover {
+    color: #007bff;
+  }
+
+  /* Adding margin to the container */
+  .container {
+    margin-top: 30px;
+  }
+
+  /* Styling the paragraphs */
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444444;
+  }
+
+  /* Adding margin to the paragraphs */
+  p:not(:last-child) {
+    margin-bottom: 20px;
+  }

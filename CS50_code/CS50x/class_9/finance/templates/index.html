@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Unit Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- TODO: Loop through the database entries to display them in this table -->
+            {% for share in shares_data %}
+
+            <tr> <!-- this is a row in the table-->
+                <td> <!-- this is a cell in the table-->
+                    {{ share['symbol']}}
+                </td>
+                <td> {{ share['symbol']}} </td>
+                <td> {{ share['shares']}} </td>
+                <td> {{ '${:,.2f}'.format(share['price']) }} </td>
+                <td> {{ '${:,.2f}'.format(share['total']) }} </td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Cash</td>
+                <td> {{ '${:,.2f}'.format(stock_totals['cash']) }} </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><b>TOTAL</b></td>
+                <td><b> {{ '${:,.2f}'.format(stock_totals['total']) }} </b></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+{% endblock %}

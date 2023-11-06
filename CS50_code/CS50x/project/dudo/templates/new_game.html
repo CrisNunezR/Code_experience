@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    New Game
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <tr>
+        There are {{human_players}} human player(s). Add the number of machine players you want in the game:
+        <td>
+            <form action="/new_game" method="post">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="auto_players" name="auto_players" placeholder="Number of auto players" type="text">
+            </div>
+            <button class="btn btn-primary" type="submit">Let's play!</button>
+            </form>
+        </td>
+        </tr>
+
+    </table>
+{% endblock %}
+
+

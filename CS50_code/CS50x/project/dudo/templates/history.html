@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Hall of Fame
+{% endblock %}
+
+{% block main %}
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Wins</th>
+                <!-- <th>Other players</th> -->
+                <!-- <th>Date</th> -->
+                <!-- <th>T_</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- TODO: Loop through the database entries to display them in this table -->
+            {% for winner in players_scores %}
+
+            <tr> <!-- this is a row in the table-->
+                <td> <!-- this is a cell in the table-->
+                    {{ winner['winner_name']}}
+                </td>
+                <td> {{ winner['count']}} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
