@@ -17,3 +17,7 @@ The course consists of 10 classes with respective assignements plus a final proj
 - Class 10: describes the requirements for the final project and emoji creation.
 - Special class on Cybersecurity: discuses password requirement, ransomware, encryption, etc.
 - Special project: I simulated a popular dice game on a web platform. The game is called 'Dudo' and my version can be played by many human and automated players that base their bets on probabilities.
+
+
+**Folder CS50p** folder contains the files for the course "CS50p: Introduction to Computer Science with Python, consisting of 8 classes plus a final project. Course covers functions, variables, conditionals, loops, exception handling, libraries (using and creation), Unit testing, File I/O, regular expressions and Object Oriented programming. 
+The course includes a final project which, in my case, was a simulation for a dice game.
