@@ -1,6 +1,6 @@
 ## Details CS50 files
 
-Folder CS50x contains files for the "CS50: Introduction to Computer Science" course version 2023, including C, Python, SQL, JavaScript, CSS and HTML, and reviewing concepts like: abstraction, data structures, encapsulation, resource management, and web development. 
+**Folder CS50x** contains files for the "CS50: Introduction to Computer Science" course version 2023, including C, Python, SQL, JavaScript, CSS and HTML, and reviewing concepts like: abstraction, data structures, encapsulation, resource management, and web development. 
 
 The course consists of 10 classes with respective assignements plus a final project (included in the 'project_CS50x' folder). 
 
