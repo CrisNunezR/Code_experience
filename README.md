@@ -9,3 +9,5 @@ Folder ML_Code contains sample Machine Learning code I prepared for personal stu
 Folder Python_Code contains code I prepared to complete the course "Introduction to Computer Science and Programming in Python" by MIT on OpenCourseware platform as well as other personal Python code.
 
 Folder C++_code contains C++ code I used to approve the "Course Object-Oriented Data Structures in C++" from the University of Illinois via Coursera.
+
+Folder Algorithm Analysis contains personal notes from the Algorithm Specialization by Stanford-Coursera and other sources.
